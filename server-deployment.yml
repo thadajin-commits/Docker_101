@@ -4,7 +4,7 @@ metadata:
   name: server-deployment
 spec:
   replicas: 3
-  selector:
+  selector:s
     matchLabels:
       app: server
   template:
