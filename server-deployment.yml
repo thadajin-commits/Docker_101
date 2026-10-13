@@ -4,7 +4,7 @@ metadata:
   name: server-deployment
 spec:
   replicas: 3
-  selector:s
+  selector:
     matchLabels:
       app: server
   template:
@@ -22,10 +22,9 @@ kind: Service
 metadata:
   name: server-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: server
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30002
